@@ -1,11 +1,15 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import { Home } from './pages';
+import { OffCanvas, SignCanvas } from './components';
 
 function App() {
   return (
     <>
-      <Route to="/" component={Home} exact />
+      <Link to="/">Home</Link>
+      <Route path="/" component={Home} exact />
+      <Route path="/offcanvas" component={OffCanvas} exact />
+      <Route path="/sign" component={SignCanvas} exact />
     </>
   );
 }
